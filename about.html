@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LORD'S WORD CHURCH．主話語教會</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link href="http://fonts.cdnfonts.com/css/high-summit" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Prata&family=Unna&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+    
+<body>
+  <!-- Nav -->
+  <nav class="main-nav">
+    <a href="./index.html"><img src="./images/logo.svg" class="logo"></a>
+
+    <ul class="main-menu">
+      <li><a href="./about.html">關於我們</a></li>
+      <li><a href="./news.html">最新消息</a></li>
+      <li><a href="./words.html">學習話語</a></li>
+      <li><a href="./album.html">活動回顧</a></li>
+      <li><a href="./story.html#">見證故事</a></li>
+      <li><a href="./shop.html#">建堂義賣</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+      <img src="images/about_header.jpg">
+  </header>
+
+  <!-- title -->
+  <div class="title_eng">
+    <p>About Us</p>
+      <div class="title_ch">
+      <span>關　於　我　們</span>
+      </div>
+  </div>
+  <div class="wording">
+    <p>抱著傳揚福音的熱情，認識上帝的美善與恩慈<br>
+      建造一個扎根聖經真理、充滿天國文化、熱情傳揚福音，<br>
+      並成為世代傳承、普世宣教且溫暖如家的教會。</p>      
+  </div>
+
+
+  <!-- The grid: four columns -->
+  <div class="row">
+  <div class="column">
+    <img src="./images/about/column01.jpg" alt="Sunday School for Kids" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="./images/about/column02.jpg" alt="Bible Study Group" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="./images/about/column03.jpg" alt="Church Youth Groups" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="./images/about/column04.jpg" alt="Sunday Morning Service" onclick="myFunction(this);">
+  </div>
+</div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+
+
+
+
+  
+  <!-- go to top bottom -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <ul class="link_list">
+        <li><a href="./about.html">Instagram　　｜</a></li>
+        <li><a href="./news.html">聯絡我們　　｜</a></li>
+        <li><a href="./album.html">FAQ　　｜</a></li>
+        <li><a href="./words.html">CGM基督教福音宣教會　　｜</a></li>
+        <li><a href="./story.html#">見面與對話</a></li>
+      </ul>
+      <br>
+      <br>
+      <div class="img"><a href="./index.html"><img src="./images/logo.svg" class="logo" style="width:150px"></a></div>
+      <p>Copyright © Taipei Lord's Word Church．2021</p>  
+    </div>
+      <br>
+    <div class="footer-bottom">
+      <p>本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。<br>
+        若有侵權疑慮，您可私訊TibaMe前端設計工程師養成班，後續會由專人協助處理。</p>
+      </div>  
+    </footer>
+
+
+
+    <script>
+      function myFunction(imgs) {
+      // Get the expanded image
+      var expandImg = document.getElementById("expandedImg");
+      // Get the image text
+      var imgText = document.getElementById("imgtext");
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg.src = imgs.src;
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      imgText.innerHTML = imgs.alt;
+      // Show the container element (hidden with CSS)
+      expandImg.parentElement.style.display = "block";
+    }
+
+
+
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+      }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+
+</body>
+</html>
